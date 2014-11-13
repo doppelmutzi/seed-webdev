@@ -10,7 +10,7 @@ $ cd seed-webdev
 $ sudo npm -g install grunt-cli bower
 $ npm install
 $ bower install
-$ grunt watch
+$ grunt
 ```
 
 Finally, open `file:///path/to/seed-webdev/dist/index.html` in your browser.
@@ -18,15 +18,17 @@ Finally, open `file:///path/to/seed-webdev/dist/index.html` in your browser.
 
 ## Purpose
 
+Constitutes a web development kickstarter. Provides a Grunt-powered development workflow that leverages SASS/Compass and the SASS-version of Bootstrap. Instead of writing conventional HTML code, SLIM can be used to develop the views. 
 
 ## Philosophy
 
-### Overall Directory Structure
+## Overall Directory Structure
 
 At a high level, the structure looks roughly like this:
 
 ```
 seed-webdev/
+  |- .gitignore
   |- .sass-cache/
   |- app/
   |  |- assets/
@@ -34,13 +36,13 @@ seed-webdev/
   |  |  |  |- css/
   |  |  |  |  |- style.css
   |  |  |  |  |- style.css.map
-  |  |  |  |  |- html/
+  |  |  |  |- html/
   |  |  |  |  |  |- index.html
   |  |  |- src/
-  |  |  |  |- haml/
-  |  |  |  |  |- index.haml
+  |  |  |  |- slim/
+  |  |  |  |  |- index.slim
   |  |  |  |- js/
-  |  |  |  |  |- <js code>
+  |  |  |  |  |- <js code structure>
   |  |  |  |  |- tests/
   |  |  |  |  |   |- <unit tests>
   |  |  |  |- scss/
@@ -96,3 +98,6 @@ learn more.
 - `package.json` - metadata about the app, used by NPM and our build script. Our
   NPM dependencies are listed here.
 
+## Grunt modules overview
+
+## Bower components overview

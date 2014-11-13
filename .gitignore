@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io
 
+### build / auto-generated content
+dist/**/*
+
 ### Sass ###
 .sass-cache
 *.css.map

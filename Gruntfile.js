@@ -102,6 +102,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      add_banner: {
+        options: {
+          banner: '/* My minified css file */'
+        },
+        files: {
+          'dist/style.css': ['<%= project.assets %>/css/**/*.css']
+        }
+      }
+    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -125,6 +135,9 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -134,6 +147,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'prepare',
     'sass:dev',
+    'cssmin',
     'watch'
   ]);
 };
