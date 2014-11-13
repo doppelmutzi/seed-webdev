@@ -1,0 +1,23 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+@import 'compass';
+@import 'bootstrap';
+
+
+
+h1 {
+	@include single-box-shadow;
+}
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using. 
+ *
+ */
+
+@import 'home.scss';
+@import 'imprint.scss';
