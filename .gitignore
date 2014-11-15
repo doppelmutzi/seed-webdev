@@ -2,6 +2,7 @@
 
 ### build / auto-generated content
 dist/**/*
+app/assets/generated/**/*
 
 ### Sass ###
 .sass-cache
