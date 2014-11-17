@@ -22,8 +22,9 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-slim": "^0.1.0",
+    "jshint-stylish": "^1.0.0",
+    "load-grunt-config": "^0.16.0",
     "load-grunt-configs": "^0.4.1",
-    "load-grunt-tasks": "^1.0.0",
-    "requirejs": "^2.1.15"
+    "load-grunt-tasks": "^1.0.0"
   }
 }

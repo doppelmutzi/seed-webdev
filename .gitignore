@@ -1,8 +1,8 @@
 # Created by https://www.gitignore.io
 
 ### build / auto-generated content
-dist/**/*
-app/assets/generated/**/*
+dist
+app/assets/generated
 
 ### Sass ###
 .sass-cache

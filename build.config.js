@@ -1,50 +1,30 @@
-/**
- * This file/module contains all configuration for the build process.
- */
+/*global module:false*/
 module.exports = {
-  doppelmutzi: 'app',
-  /**
-   * The `build_dir` folder is where our projects are compiled during
-   * development and the `compile_dir` folder is where our app resides once it's
-   * completely built.
-   */
-  build_dir: 'build',
-  compile_dir: 'bin',
-  sass_dir: 'sass',
-  sass_overrides_dir: 'src/sass/bootstrap_overrides',
-  app_dir: 'src/app',
-
-  /**
-   * This is a collection of file patterns that refer to our app code (the
-   * stuff in `src/`). These file paths are used in the configuration of
-   * build tasks. `js` is all project javascript, less tests. `ctpl` contains
-   * our reusable components' (`src/common`) template HTML files, while
-   * `atpl` contains the same, but for our app's code. `html` is just our
-   * main HTML file, `less` is our main stylesheet, and `unit` contains our
-   * app's unit tests.
-   */
-  app_files: {
-    js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
-    json: ['src/**/*.json'],
-    jsunit: [ 'src/**/*.spec.js' ],
+   /********************************************************************************************
+    * The 'project' object defines objects that hold information  (paths, glob patterns, etc.) 
+    * that need to be referenced from module's task definitions in order to reduce redundancy.
+    * The following naming conventions exist:
+    * - <name>: The value represents a path to a folder
+    * - <name>_file: The value represents a specific file
+    * - <name>_glob: The value represents a glob pattern
+    * - <name>_dev and <name>_dist: The value communicates that the value is meant for the development 
+    *  or build/distribution workflow, respectively.   
+    *********************************************************************************************/
     
-    coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
-    coffeeunit: [ 'src/**/*.spec.coffee' ],
-
-    atpl: [ 'src/app/**/*.tpl.html' ],
-    ctpl: [ 'src/common/**/*.tpl.html' ],
-
-    html: [ 'src/index.html' ],
-    sass: 'src/sass/main.scss'
-  },
-
-  /**
-   * This is a collection of files used during testing only.
-   */
-  test_files: {
-    js: [
-      'vendor/angular-mocks/angular-mocks.js'
-    ]
-  },
-
+    	app: 'app',
+    	assets: '<%= project.app %>/assets',
+    	src: '<%= project.assets %>/src',
+      gen: '<%= project.assets %>/generated',
+      css: '<%= project.gen %>/css',
+      // SASS
+      scss: '<%= project.src %>/scss',
+      scss_file: [
+      		'<%= project.scss %>/style.scss'
+    	],
+    	js: [
+      		'<%= project.src %>/js/*.js'
+      ],
+      slim: '<%= project.src %>/slim',
+      html: '<%= project.gen %>/html'
+    
 };

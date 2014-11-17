@@ -45,6 +45,7 @@ For tec talk:
 - Bootstrap zeigen (Grid System / RWD technik), lessons learnt, siehe gebookmarkte blogs
 - Bootstrap + Sass -> Trennung RWD/Layout von View -> lose Kopplung, leicht austauschbar, problemlos wenn sich bootstrap stark ändern würde
 - Ggf CSS pitfalls: horizontal und vertical aligment
+- http://t3n.de/news/basics-responsive-webdesign-9-578560/?utm_content=buffer70daa&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 ## Purpose
 
