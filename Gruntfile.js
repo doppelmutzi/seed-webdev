@@ -1,24 +1,18 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  /***************************************************************************** 
-   * Load required Grunt tasks. These are installed based on the versions listed
+   /***************************************************************************** 
+   * Load required Grunt tasks. These tasks are installed based on the versions listed
    * in `package.json` when you do `npm install` in this directory.
+   *
+   * No explicit `grunt.loadNpmTasks()` calls are required. 
+   * The following command loads in all Grunt tasks specified in `package.json`.
    *****************************************************************************/
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-concat-css');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-slim');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
+  require('load-grunt-tasks')(grunt);
 
   /********************************************************************************************
-  * Object holds data required by swapped out task configuration files located at config folder.   
+  * This object holds data required by swapped out task configuration files located at
+  * `config/` folder.  
   *********************************************************************************************/   
   var options = {
     /********************************************************************************************
