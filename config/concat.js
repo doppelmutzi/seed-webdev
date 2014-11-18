@@ -1,4 +1,4 @@
-{
+module.exports.tasks = {
 	"concat": {
       "options": {
         "banner": "<%= banner %>",
