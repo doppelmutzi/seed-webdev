@@ -5,7 +5,7 @@ module.exports.tasks = {
       },
       "dist": {
         "src": "<%= project.js_glob %>",
-        "dest": "dist/<%= pkg.name %>.min.js"
+        "dest": "<%= project.js_dist %>/<%= pkg.name %>.min.js"
       }
     }
 }
