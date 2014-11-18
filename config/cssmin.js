@@ -10,7 +10,7 @@ module.exports.tasks = {
         "banner": "/* My minified css file */"
       },
       "files": {
-        "dist/style.css": ["<%= project.css %>/**/*.css"]
+        "<%= project.css_dist %>/style.css": ["<%= project.css_gen %>/**/*.css"]
       }
     }
   }

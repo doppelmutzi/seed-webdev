@@ -4,7 +4,7 @@ module.exports.tasks = {
         "banner": "<%= banner %>"
       },
       "dist": {
-        "src": "<%= project.js %>",
+        "src": "<%= project.js_glob %>",
         "dest": "dist/<%= pkg.name %>.min.js"
       }
     }

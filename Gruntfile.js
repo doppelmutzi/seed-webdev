@@ -26,21 +26,32 @@ module.exports = function(grunt) {
     *  or build/distribution workflow, respectively.   
     *********************************************************************************************/
     project: {
+      // project src/target folders
       app: 'app',
       assets: '<%= project.app %>/assets',
       src: '<%= project.assets %>/src',
       gen: '<%= project.assets %>/generated',
-      css: '<%= project.gen %>/css',
-      // SASS-related folders
+      dist: 'dist/',
+      // CSS related
+      css_gen: '<%= project.gen %>/css',
+      css_dist: '<%= project.dist %>/css',
       scss: '<%= project.src %>/scss',
+      // Actual file that is used by the system. All other SASS files need to be included into this one.
       scss_file: [
           '<%= project.scss %>/style.scss'
       ],
-      js: [
-          '<%= project.src %>/js/*.js'
-      ],
-      slim: '<%= project.src %>/slim',
-      html: '<%= project.gen %>/html'
+      // Javascript related
+      js: ['<%= project.src %>/js'],
+      js_glob: ['<%= project.js %>/**/*.js'],
+      js_gen: '<%= project.gen %>/js',
+      js_dist: '<%= project.dist %>/js',
+      // SLIM / HTML related
+      // Folder for root view / index.slim. This is meant as entry point of app
+      slim: '<%= project.src %>',      
+      // the other views / partials etc.
+      slim_includes: '<%= project.src %>/slim',
+      html: '<%= project.gen %>/html',
+      html_dist: '<%= project.dist %>/html'
     },
     /********************************************************************************************
     * Defines banner that can be put on top of assets during task processing.
@@ -73,7 +84,7 @@ module.exports = function(grunt) {
    * Connects 'atomar' tasks defined in files located at config folder.
    *****************************************************************************/
   grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
-  grunt.registerTask('css', ['sass:dev', 'cssmin']);
+  grunt.registerTask('css', ['sass', 'cssmin']);
   grunt.registerTask('html', ['slim', 'htmlmin']);
   grunt.registerTask('default', ['js', 'css', 'html', 'watch']);
 };

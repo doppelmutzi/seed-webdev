@@ -12,7 +12,7 @@
       	  compass: true
         },
         files: {
-          '<%= project.css %>/style.css': '<%= project.scss_file %>'
+          '<%= project.css_gen %>/style.css': '<%= project.scss_file %>'
         }
       },
       dist: {
@@ -21,7 +21,7 @@
           compass: true
         },
         files: {
-          '<%= project.css %>/style.css': '<%= project.scss_file %>'
+          '<%= project.css_gen %>/style.css': '<%= project.scss_file %>'
         }
       }
     }

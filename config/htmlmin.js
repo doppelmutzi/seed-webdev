@@ -8,9 +8,15 @@ module.exports.tasks = {
         removeRedundantAttributes: true,
         removeOptionalTags: true
       },
-      compress: {
-        src: "dist/index.html",
-        dest: "dist/index.html"
+      file: {
+        files: {
+          src: ['index.html', 'html/**/*.html'],
+          dest: "<%= project.dist %>",
+          filter: {
+            cwd: '<%= project.gen %>'
+          }
+        }  
       }
+      
   }
 }

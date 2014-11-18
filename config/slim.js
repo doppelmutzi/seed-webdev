@@ -5,22 +5,22 @@
 *********************************************************************************************/    
 module.exports.tasks = {
 	slim: {                              
-		dist: {
+		main_file: {
 			files: [{
 			  expand: true,
 			  cwd: '<%= project.slim %>',
 			  src: ['{,*/}*.slim'],
-			  dest: 'dist',
+			  dest: '<%= project.gen %>',
 			  ext: '.html'
 			}]
 	    },
-		dev: {                             
+		other_files: {                             
 			options: {                       
 				pretty: true
 			},
 			files: [{
 				expand: true,
-				cwd: '<%= project.slim %>',
+				cwd: '<%= project.slim_includes %>',
 				src: ['{,*/}*.slim'],
 				dest: '<%= project.html %>',
 				ext: '.html'

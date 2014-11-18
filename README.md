@@ -41,8 +41,9 @@ seed-webdev/
   |  |  |  |- js/
   |  |  |  |  |- app.js
   |  |  |- src/
+  |  |  |  |- index.slim
   |  |  |  |- slim/
-  |  |  |  |  |- index.slim
+  |  |  |  |  |- <slim files>
   |  |  |  |- js/
   |  |  |  |  |- <js code structure>
   |  |  |  |  |- tests/
@@ -51,9 +52,9 @@ seed-webdev/
   |  |  |  |  |- _bootstrap.scss
   |  |  |  |  |- _variables.scss
   |  |  |  |  |- style.scss
-  |  |  |  |  |  |- custom/
-  |  |  |  |  |  |  |- main.scss
-  |  |  |  |  |  |  |- <more scss files>
+  |  |  |  |  |- custom/
+  |  |  |  |  |  |- main.scss
+  |  |  |  |  |  |- <more scss files>
   |  |  |- resources/
   |  |  |  |- images/
   |  |  |  |- <other static resources>
@@ -91,7 +92,7 @@ seed-webdev/
 What follows is a brief description of each entry, but most directories contain
 their own `README.md` file with additional documentation.
 
-- `app/assets/src` - our application sources. [Read more &raquo;](app/assets/src/README.md)  
+- `app/assets/src` - our application sources. Javascript, CSS, and SLIM files are located in the particular sub folder `slim`, `js`, and `scss`. `index.slim` constitutes the main view of the application. [Read more &raquo;](app/assets/src/README.md)  
 - `app/assets/generated` - The application sources get processed (transcompiled, concatenated, etc.) and put here. [Read more &raquo;](app/assets/generated/README.md)
 - `app/assets/resources` - Static resources, e.g., images, sound files, come here
 - `bower_components/` - third-party libraries. [Bower](http://bower.io) will install packages here. This folder is not under version control (see `.gitignore`). Based on `bower.json` file, this folder gets automatically created and populated by invoking the following the following command in the project root folder:
@@ -125,8 +126,8 @@ npm install --save-dev grunt-contrib-cssmin grunt-contrib-htmlmin grunt-slim
 
 This seed project is configured to utilize the following frontend development technolgies:
 
-- 'SASS' - Is a scripting language that is interpreted into Cascading Style Sheets (CSS). [official website &raquo;](http://sass-lang.com/)
-- 'Compass' - Is a CSS3 authoring framework based on SASS [official website &raquo;](http://compass-style.org/)
+- `SASS` - Is a scripting language that is interpreted into Cascading Style Sheets (CSS). [official website &raquo;](http://sass-lang.com/)
+- `Compass` - Is a CSS3 authoring framework based on SASS [official website &raquo;](http://compass-style.org/)
 - `Bootstrap`- Its purpose is to create responsive views that displays the content optimized dependent on the current device / view size. The SASS version of Bootstrap is used in order to have a better seperation between views (i.e., HTML) and style (i.e., CSS) by using mixings that include the required Bootstrap classes (e.g., `row`, `col-lg-12`) during transcompilation into the generated CSS files. [official website &raquo;](http://getbootstrap.com/)
 - `SLIM`-  Is a template language whose goal is to reduce the HTML view syntax [official website &raquo;](http://slim-lang.com/)
 
@@ -159,7 +160,8 @@ described below:
 
 This project is work in progress. The list of things planned are listed here:
 
-- dist: files nach css, html, etc. 
+- finale Struktur schon in generated folder, dann nur noch minify/uglify bei distr
+- tasks registrieren für dev und build workflow
 - finalize all README.md files
 - insert example resources and use them
 - Create a Grunt grunt-init / scaffolding template that can geneated the whole folder structure with and without boilderplate/example files
@@ -172,7 +174,7 @@ Maybe:
 
 For tec talk:
 
-- walktrough this project / build process (dev, distrub)
+- walktrough this project / build process (dev, dist)
 - integration with maven / jenkins
 - Verweiß auf grunt / bower im Detail (wie hier vorgegangen) tec talk Januar
 - SASS im Detail zeigen (install, Verwenden, grunt workflow)
