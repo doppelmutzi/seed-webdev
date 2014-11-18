@@ -14,7 +14,7 @@ $ gem install slim
 $ grunt
 ```
 
-The built files are located at `file:///path/to/seed-webdev/dist/`.
+The built files are located at `file:///path/to/seed-webdev/dist/`. 
 
 ## Purpose
 
@@ -56,7 +56,7 @@ seed-webdev/
   |  |  |  |  |- custom/
   |  |  |  |  |  |- main.scss
   |  |  |  |  |  |- <more scss files>
-  |  |  |- resources/
+  |  |- resources/
   |  |  |  |- images/
   |  |  |  |- <other static resources>
   |- bower_components/
@@ -161,10 +161,9 @@ described below:
 
 This project is work in progress. The list of things planned are listed here:
 
-- finale Struktur schon in generated folder, dann nur noch minify/uglify bei distr
 - tasks registrieren für dev und build workflow
 - finalize all README.md files
-- insert example resources and use them
+- insert example resources die nach gen und dist kopiert werden
 - Create a Grunt grunt-init / scaffolding template that can geneated the whole folder structure with and without boilderplate/example files
 - evaluate whether and how to include yeoman
 

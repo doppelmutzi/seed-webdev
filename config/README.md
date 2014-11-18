@@ -26,4 +26,4 @@ module.exports.tasks = {
 }
 ```
 
-There are also other file formats, e.g., `.json` possible. For more information refer [load-grunt-configs documentation &raquo;](https://github.com/creynders/load-grunt-configs).
+There are also other file formats possible, e.g., `.json`. For more information refer [load-grunt-configs documentation &raquo;](https://github.com/creynders/load-grunt-configs).
