@@ -34,6 +34,7 @@ seed-webdev/
   |- app/
   |  |- assets/
   |  |  |- generated/
+  |  |  |  |- .gitignore
   |  |  |  |- css/
   |  |  |  |  |- style.css
   |  |  |  |  |- style.css.map
@@ -75,10 +76,15 @@ seed-webdev/
   |  |- uglify.js
   |  |- watch.js
   |- dist/
+  |  |- .gitignore
   |  |- css/
   |  |  |- style.min.css
+  |  |- html/
   |  |- js/
+  |  |  |- seed-webdev.min.js
   |  |- resources/
+  |  |  |- images/
+  |  |  |- <more resources>
   |  |- index.html
   |- node_modules/
   |  |- grunt/
