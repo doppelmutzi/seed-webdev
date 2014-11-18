@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Install Node.js and then:
+Install `Ruby` andd `Node.js` and then:
 
 ```sh
 $ git clone git://git.netpioneer.de/sweber/seed-webdev
@@ -10,6 +10,7 @@ $ cd seed-webdev
 $ sudo npm -g install grunt-cli bower
 $ npm install
 $ bower install
+$ gem install slim
 $ grunt
 ```
 
