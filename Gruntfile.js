@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       assets: '<%= project.app %>/assets',
       src: '<%= project.assets %>/src',
       gen: '<%= project.assets %>/generated',
-      dist: 'dist/',
+      dist: 'dist',
       // CSS related
       css_gen: '<%= project.gen %>/css',
       css_dist: '<%= project.dist %>/css',
