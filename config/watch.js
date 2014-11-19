@@ -12,9 +12,13 @@ module.exports.tasks = {
 			files: '<%= project.js %>',
 			tasks: ['jshint:app_js']
 		},
-		sass: {
-			files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
-			tasks: ['sass:dev']
+		app_sass: {
+			files: ['<%= project.src %>/{,*/}*.{scss,sass}'],
+			tasks: ['sass']
+		},
+		app_slim: {
+			files: ['<%= project.slim %>/index.slim', '<%= project.slim_includes %>/*.slim'],
+			tasks: ['slim']
 		}
     }
 }

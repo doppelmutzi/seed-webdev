@@ -168,6 +168,7 @@ described below:
 This project is work in progress. The list of things planned are listed here:
 
 - tasks registrieren für dev und build workflow
+- kein min html in generated folder
 - finalize all README.md files
 - insert example resources die nach gen und dist kopiert werden
 - Create a Grunt grunt-init / scaffolding template that can geneated the whole folder structure with and without boilderplate/example files
