@@ -4,11 +4,20 @@ html
   head
     title Slim Examples
     meta name="keywords" content="template language"
-    javascript:
-      alert('Slim supports embedded javascript!')
+    link href='css/style.css' rel='stylesheet' type='text/css' 
+    link rel='stylesheet' href='css/print.css' type='text/css' media='print'
   /! This will get displayed as html comments.
   body
     h1 Markup examples go here
 
     #content
-      p This example shows you how a basic Slim file looks like.
+      p class="noprint" This example shows you how a basic Slim file looks like.
+
+    section
+        article column 1
+        article column 2
+
+    div class="row"
+      div class="col-lg-12" 
+        div class="pull-right" full-stretch column
+

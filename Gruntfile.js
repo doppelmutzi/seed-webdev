@@ -40,6 +40,9 @@ module.exports = function(grunt) {
       scss_file: [
           '<%= project.scss %>/style.scss'
       ],
+      scss_print_file: [
+        '<%= project.scss %>/print.scss'
+      ],
       // Javascript related
       js: ['<%= project.src %>/js'],
       js_glob: ['<%= project.js %>/**/*.js'],

@@ -16,3 +16,14 @@
 
 @import 'home.scss';
 @import 'imprint.scss';
+
+section {
+    @include make-row();
+    article {
+        @include make-lg-column(6);
+    }
+}
+
+article {
+	color: scale-lightness(black, 50%);
+}

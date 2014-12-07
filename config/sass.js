@@ -12,7 +12,7 @@
       	  compass: true
         },
         files: {
-          '<%= project.css_gen %>/style.css': '<%= project.scss_file %>'
+          '<%= project.css_gen %>/style.css': '<%= project.scss_file %>', '<%= project.css_gen %>/print.css': '<%= project.scss_print_file %>' 
         }
       },
       dist: {
