@@ -29,6 +29,7 @@ module.exports = function(grunt) {
       // project src/target folders
       app: 'app',
       assets: '<%= project.app %>/assets',
+      images: '<%= project.app %>/resources/images',
       src: '<%= project.assets %>/src',
       gen: '<%= project.assets %>/generated',
       dist: 'dist',
@@ -87,7 +88,7 @@ module.exports = function(grunt) {
    * Connects 'atomar' tasks defined in files located at config folder.
    *****************************************************************************/
   grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
-  grunt.registerTask('css', ['sass', 'cssmin']);
+  grunt.registerTask('css', ['sass:dev']);
   grunt.registerTask('html', ['slim', 'htmlmin']);
   grunt.registerTask('default', ['js', 'css', 'html', 'watch']);
 };

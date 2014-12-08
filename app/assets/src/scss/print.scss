@@ -1,3 +1,7 @@
-.noprint {
+@mixin do-not-print {
 	display: none;
+}
+
+#content p {
+	@include do-not-print;
 }

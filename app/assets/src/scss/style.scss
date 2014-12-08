@@ -27,3 +27,7 @@ section {
 article {
 	color: scale-lightness(black, 50%);
 }
+
+@import "browser/*.png";
+
+@include all-browser-sprites;
