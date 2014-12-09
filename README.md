@@ -91,6 +91,7 @@ seed-webdev/
   |  |- grunt-contrib-concat/
   |  |- <more grunt modules>
   |- bower.json
+  |- config.rb
   |- Gruntfile.js
   |- package.json
   |- README.md
@@ -117,6 +118,7 @@ $ bower install --save-dev font-awesome
 $ npm install
 ```
 - `.gitignore` - Excludes auto-generated content: bower components, node modules, .sass-cache, IDE-related files, and generated assets (e.g., .css files created from .scss files)
+- `config.rb` - Configuration file for Compass required in order to find images for spriting mechanism [Read more &raquo;](http://compass-style.org/help/tutorials/spriting/).
 - `Gruntfile.js` - our build script; see "The Build System" below.
 - `package.json` - metadata about the application, used by NPM and our build script. In addition, the information stored in this file are used during Grunt workflow, e.g., to generate banners that are put on top of generated files. Our
   NPM dependencies are listed here. Dependencies get added by infoking `npm install`as the following example command shows:
@@ -167,6 +169,8 @@ described below:
 
 This project is work in progress. The list of things planned are listed here:
 
+- refactor dist mechanism 
+- uncss finalisieren und Dokumentieren
 - tasks registrieren für dev und build workflow
 - kein min html in generated folder
 - finalize all README.md files
