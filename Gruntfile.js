@@ -28,15 +28,20 @@ module.exports = function(grunt) {
     project: {
       // project src/target folders
       app: 'app',
-      assets: '<%= project.app %>/assets',
-      images: '<%= project.app %>/resources/images',
+      assets: '<%= project.app %>/assets',            
       src: '<%= project.assets %>/src',
       gen: '<%= project.assets %>/generated',
+      resources: '<%= project.app %>/resources',
+      resources_gen: '<%= project.gen %>/resources',
+      images: '<%= project.resources %>/images',
+      images_gen: '<%= project.gen %>/resources/images',
       dist: 'dist',
       // CSS related
       css_gen: '<%= project.gen %>/css',
       css_dist: '<%= project.dist %>/css',
       scss: '<%= project.src %>/scss',
+      sprites: '<%= project.scss %>/images',
+      sprites_gen: '<%= project.css_gen %>/images',
       // Actual file that is used by the system. All other SASS files need to be included into this one.
       scss_file: [
           '<%= project.scss %>/style.scss'

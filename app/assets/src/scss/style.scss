@@ -30,4 +30,9 @@ article {
 
 @import "browser/*.png";
 
-@include all-browser-sprites;
+.firefox {
+	@include browser-sprite(firefox_256x256);
+	height: browser-sprite-height(firefox_256x256);
+	width: browser-sprite-width(firefox_256x256);
+	display: block;
+}
