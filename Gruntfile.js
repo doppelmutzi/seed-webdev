@@ -89,5 +89,5 @@ module.exports = function(grunt) {
   grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
   grunt.registerTask('css', ['sass:dev']);
   grunt.registerTask('html', ['slim', 'htmlmin']);
-  grunt.registerTask('default', ['js', 'css', 'html', 'watch']);
+  grunt.registerTask('default', ['js', 'css', 'html', 'copy', 'watch']);
 };

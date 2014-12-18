@@ -24,15 +24,75 @@ section {
     }
 }
 
+
+
 article {
 	color: scale-lightness(black, 50%);
 }
 
 @import "browser/*.png";
 
+@include all-browser-sprites;
+
 .firefox {
 	@include browser-sprite(firefox_256x256);
 	height: browser-sprite-height(firefox_256x256);
 	width: browser-sprite-width(firefox_256x256);
 	display: block;
+}
+
+.chrome {
+	@include browser-sprite(chrome_256x256);
+	height: browser-sprite-height(chrome_256x256);
+	width: browser-sprite-width(chrome_256x256);
+	display: block;
+}
+
+article {
+    @include gradient-horizontal(#1834cc, #1dc937, 0%, 100%);
+}
+
+
+@mixin colorbox-container($width, $height, $color) {
+	width: $width; 
+	height: $height; 
+	background-color: $color;
+}
+%horizontal-vertical-center-block {	
+   position: relative; top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   margin: 0 auto;
+   border: 1px solid black; color: white;
+}
+.redbox {
+	@include colorbox-container(400px, 400px, red);
+	@extend %horizontal-vertical-center-block;
+}
+.bluebox {
+	@extend %horizontal-vertical-center-block;
+	@include colorbox-container(200px, 200px, blue);
+}
+.greenbox {
+	@extend %horizontal-vertical-center-block;
+	@include colorbox-container(100px, 100px, green);
+}
+.greenbox-text-container {
+	display: table;	overflow: hidden;
+	height: 100%; width: 100%;	
+}
+.greenbox-text {
+	display: table-cell; 
+	vertical-align: middle; text-align: center;
+}
+
+.seb-container-fluid {
+	background-color: red;
+	padding: 20px 0 20px 0;
+}
+
+
+.seb-container-fluid2 {
+	background-color: green;
 }
